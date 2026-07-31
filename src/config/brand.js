@@ -7,7 +7,7 @@ export const BRAND = {
   description:
     "Elqavon develops secure software, intelligent business systems and integrated digital solutions that help organisations operate efficiently, serve customers better and prepare for the future.",
   email: "hello@elqavon.space",
-  website: "https://elqavon.com",
+  website: "https://elqavon.space",
   mission:
     "Create secure, intelligent technology that enables organisations to operate more efficiently and prepare confidently for the future.",
   vision:
