@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment
+.env
+.env.*
+
+# Visual Studio
+.vs/
+
+# Backup folders
+_elqavon_cms_backups/
+_elqavon_premium_backups/
+_elqavon_rebrand_backups/

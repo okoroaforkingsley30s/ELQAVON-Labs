@@ -1,0 +1,36 @@
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\api\appBackend.js:7: console.warn('VITE_SUPABASE_ANON_KEY is not set. Run Install-NexoraLabs-Local-Supabase.ps1.');
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\components\home\TestimonialsSection.jsx:10: content: 'Nexora Labs transformed our entire operation with the ARK ONE ERP. Their engineering rigor and attention to detail is unmatched. The system handles millions of transactions seamlessly.',
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\components\home\TestimonialsSection.jsx:24: content: 'From core banking to mobile apps, Nexora Labs delivered a complete digital transformation. Their fintech expertise and security standards gave us complete confidence.',
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\components\home\TestimonialsSection.jsx:37: description="What our clients say about working with Nexora Labs."
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\components\layout\Footer.jsx:38: Nexora <span className="text-primary">Labs</span>
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\components\layout\Footer.jsx:48: <span>hello@nexoralabs.com</span>
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\components\layout\Footer.jsx:82: © {new Date().getFullYear()} Nexora Labs. All rights reserved.
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\components\layout\Navbar.jsx:43: Nexora <span className="text-primary">Labs</span>
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\pages\admin\Dashboard.jsx:47: <p className="text-sm text-muted-foreground mt-1">Here's an overview of your Nexora Labs dashboard.</p>
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\pages\About.jsx:15: { year: '2018', title: 'Founded', desc: 'Nexora Labs established with a vision to transform enterprise technology.' },
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\pages\About.jsx:42: Nexora Labs is a global software engineering company specializing in enterprise solutions,
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\pages\About.jsx:98: {/* Why Nexora Labs */}
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\pages\About.jsx:101: <SectionHeading label="Why Choose Us" title="The Nexora Advantage" />
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\pages\Blog.jsx:14: author: 'Nexora Labs',
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\pages\Blog.jsx:22: author: 'Nexora Labs',
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\pages\Blog.jsx:30: author: 'Nexora Labs',
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\pages\Blog.jsx:38: author: 'Nexora Labs',
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\pages\Blog.jsx:46: author: 'Nexora Labs',
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\pages\Blog.jsx:54: author: 'Nexora Labs',
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\pages\Careers.jsx:58: <SectionHeading label="Culture" title="Why Work at Nexora?" description="We believe great technology comes from great teams. Here's what makes Nexora Labs different." />
+C:\Users\okoro\Documents\Scripts\Nexora Labs\src\pages\Contact.jsx:59: { icon: Mail, label: 'Email', value: 'hello@nexoralabs.com' },
+C:\Users\okoro\Documents\Scripts\Nexora Labs\index.html:7: <title>Nexora Labs — Engineering the Future of Business</title>
+C:\Users\okoro\Documents\Scripts\Nexora Labs\index.html:8: <meta name="description" content="Nexora Labs builds enterprise software, ERP systems, AI solutions, mobile apps, websites, fintech platforms, and business automation systems. Building the next era of innovation." />
+C:\Users\okoro\Documents\Scripts\Nexora Labs\index.html:13: <meta property="og:title" content="Nexora Labs — Engineering the Future of Business" />
+C:\Users\okoro\Documents\Scripts\Nexora Labs\index.html:15: <meta property="og:site_name" content="Nexora Labs" />
+C:\Users\okoro\Documents\Scripts\Nexora Labs\index.html:19: <meta name="twitter:title" content="Nexora Labs — Engineering the Future of Business" />
+C:\Users\okoro\Documents\Scripts\Nexora Labs\index.html:27: "name": "Nexora Labs",
+C:\Users\okoro\Documents\Scripts\Nexora Labs\index.html:29: "url": "https://nexoralabs.com",
+C:\Users\okoro\Documents\Scripts\Nexora Labs\index.html:33: "email": "hello@nexoralabs.com",
+C:\Users\okoro\Documents\Scripts\Nexora Labs\package-lock.json:2: "name": "nexora-labs-local-supabase",
+C:\Users\okoro\Documents\Scripts\Nexora Labs\package-lock.json:8: "name": "nexora-labs-local-supabase",
+C:\Users\okoro\Documents\Scripts\Nexora Labs\package.json:2: "name": "nexora-labs-local-supabase",
+C:\Users\okoro\Documents\Scripts\Nexora Labs\README.md:1: # Nexora Labs — Local Supabase Edition
+C:\Users\okoro\Documents\Scripts\Nexora Labs\README.md:8: cd /d "C:\Users\okoro\Documents\Scripts\Nexora Labs"
+C:\Users\okoro\Documents\Scripts\Nexora Labs\README.md:9: powershell -NoProfile -ExecutionPolicy Bypass -File ".\Install-NexoraLabs-Local-Supabase.ps1" -ProjectPath "%CD%"
+C:\Users\okoro\Documents\Scripts\Nexora Labs\README.md:18: Or double-click `Start-NexoraLabs-Local.cmd` on later runs.
