@@ -1,60 +1,9 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Code2, Workflow, Landmark, Brain, Cloud, RefreshCw, Boxes, ArrowRight } from 'lucide-react';
+import { Code2, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { BRAND } from '@/config/brand';
-
-const SERVICES = [
-  {
-    icon: Code2,
-    title: 'Enterprise Software Development',
-    description:
-      'Secure, scalable software platforms designed around real organisational processes, user roles and operational requirements.',
-    focus: ['Web platforms', 'Desktop systems', 'Mobile applications', 'Backend services'],
-  },
-  {
-    icon: Workflow,
-    title: 'ERP and Business Systems',
-    description:
-      'Integrated systems for workforce management, finance, operations, inventory, procurement, customer management, service delivery and reporting.',
-    focus: ['Department workflows', 'Access control', 'Operational reporting', 'Process accountability'],
-  },
-  {
-    icon: Landmark,
-    title: 'Fintech Infrastructure',
-    description:
-      'Payment, card-service and financial technology platforms designed for secure institutional integration and controlled operational environments.',
-    focus: ['Institution connectivity', 'Card services', 'Identity workflows', 'Controlled operations'],
-  },
-  {
-    icon: Brain,
-    title: 'Artificial Intelligence',
-    description:
-      'AI-enabled tools, intelligent assistants, automation workflows and decision-support systems that improve productivity and service delivery.',
-    focus: ['Intelligent assistants', 'Workflow automation', 'Decision support', 'Applied AI'],
-  },
-  {
-    icon: Cloud,
-    title: 'Cloud and Systems Integration',
-    description:
-      'Cloud platforms, APIs, databases and third-party integrations that connect systems and improve information flow.',
-    focus: ['Cloud platforms', 'API integration', 'Database engineering', 'Connected services'],
-  },
-  {
-    icon: RefreshCw,
-    title: 'Digital Transformation',
-    description:
-      'Structured modernisation of manual and disconnected business processes into measurable, secure and maintainable digital operations.',
-    focus: ['Process discovery', 'Workflow redesign', 'Data visibility', 'Operational adoption'],
-  },
-  {
-    icon: Boxes,
-    title: 'Custom Product Engineering',
-    description:
-      'End-to-end development of digital products from discovery and architecture through implementation, testing, deployment and continuous improvement.',
-    focus: ['Product discovery', 'Architecture', 'Implementation', 'Continuous improvement'],
-  },
-];
+import { CAPABILITIES } from '@/config/capabilities';
+import WhyElqavon from '@/components/capabilities/WhyElqavon';
 
 const fadeUp = {
   initial: { opacity: 0, y: 28 },
@@ -62,6 +11,15 @@ const fadeUp = {
   viewport: { once: true },
   transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
 };
+
+const SERVICES = CAPABILITIES.map(capability => ({
+  title: capability.title,
+  description: capability.description,
+  focus: capability.services.slice(0, 4),
+
+  // Temporary until we enrich capabilities.js
+  icon: Code2,
+}));
 
 export default function Services() {
   return (
@@ -71,21 +29,41 @@ export default function Services() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp} className="space-y-6 max-w-4xl">
             <span className="inline-block font-mono text-xs font-medium tracking-widest uppercase text-primary px-3 py-1 rounded-full border border-primary/20 bg-primary/5">
-              Services
+              Enterprise Capabilities
             </span>
             <h1 className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl tracking-tighter text-secondary">
-              Engineering Services for Modern Organisations
+              Enterprise Technology Capabilities
             </h1>
             <p className="text-muted-foreground text-base lg:text-lg leading-relaxed max-w-3xl">
-              {BRAND.displayName} combines software engineering, operational understanding and integrated technology
-              delivery to solve complex institutional and business challenges.
-            </p>
+  ELQAVON delivers enterprise software engineering, technology consulting,
+  cloud infrastructure, artificial intelligence, cybersecurity, systems
+  integration and digital transformation services that help organizations
+  modernize, automate and scale with confidence.
+</p>
           </motion.div>
         </div>
       </section>
 
+      <WhyElqavon />
+
       <section className="pb-24 lg:pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center mb-14">
+  <span className="inline-block font-mono text-xs font-medium tracking-widest uppercase text-primary px-3 py-1 rounded-full border border-primary/20 bg-primary/5">
+    Our Capabilities
+  </span>
+
+  <h2 className="mt-6 font-heading font-extrabold text-3xl md:text-4xl tracking-tight text-secondary">
+    Technology Capabilities Built for Enterprise
+  </h2>
+
+  <p className="mt-5 text-muted-foreground leading-relaxed text-base lg:text-lg">
+    From enterprise software engineering and technology consulting to cloud,
+    artificial intelligence, cybersecurity and systems integration, our
+    multidisciplinary capabilities help organizations modernize, innovate and
+    scale with confidence.
+  </p>
+</div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {SERVICES.map((service, index) => (
               <motion.article

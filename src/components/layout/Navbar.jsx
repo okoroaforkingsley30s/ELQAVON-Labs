@@ -4,17 +4,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { BRAND } from '@/config/brand';
+import { NAVIGATION } from '@/config/navigation';
 import BrandLogo from '@/components/BrandLogo';
-
-const NAV_LINKS = [
-  { label: 'Home', path: '/' },
-  { label: 'About', path: '/about' },
-  { label: 'Services', path: '/services' },
-  { label: 'Portfolio', path: '/portfolio' },
-  { label: 'Careers', path: '/careers' },
-  { label: 'Blog', path: '/blog' },
-  { label: 'Contact', path: '/contact' },
-];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -55,7 +46,7 @@ export default function Navbar() {
           </Link>
 
           <div className="hidden items-center gap-0.5 lg:flex">
-            {NAV_LINKS.map(link => {
+            {NAVIGATION.map(link => {
               const active = location.pathname === link.path;
               return (
                 <Link
@@ -118,7 +109,7 @@ export default function Navbar() {
             className="overflow-hidden border-t border-secondary/10 bg-white text-foreground shadow-2xl lg:hidden"
           >
             <div className="space-y-1 px-4 py-4">
-              {NAV_LINKS.map(link => (
+              {NAVIGATION.map(link => (
                 <Link
                   key={link.path}
                   to={link.path}

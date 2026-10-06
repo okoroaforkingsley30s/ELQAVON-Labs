@@ -44,9 +44,10 @@ automatically.
 
 ## Authentication
 
-Create a local account at `/register`, then open `/admin`. Local development
-users receive the admin role by default. Replace this permissive local policy
-before internet deployment.
+On a fresh local database, the first account created at `/register` receives
+the bootstrap admin role. Later accounts are regular users until an admin
+promotes them. Review the local bootstrap and database policies before
+internet deployment.
 
 ## Database
 

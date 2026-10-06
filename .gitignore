@@ -7,6 +7,7 @@ dist/
 # Environment
 .env
 .env.*
+!.env.example
 
 # Visual Studio
 .vs/
@@ -15,3 +16,7 @@ dist/
 _elqavon_cms_backups/
 _elqavon_premium_backups/
 _elqavon_rebrand_backups/
+
+# Supabase local CLI state
+supabase/.branches/
+supabase/.temp/
