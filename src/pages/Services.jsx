@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Code2, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { CAPABILITIES } from '@/config/capabilities';
+import CapabilityCard from '@/components/capabilities/CapabilityCard';
 import WhyElqavon from '@/components/capabilities/WhyElqavon';
 
 const fadeUp = {
@@ -11,15 +12,6 @@ const fadeUp = {
   viewport: { once: true },
   transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
 };
-
-const SERVICES = CAPABILITIES.map(capability => ({
-  title: capability.title,
-  description: capability.description,
-  focus: capability.services.slice(0, 4),
-
-  // Temporary until we enrich capabilities.js
-  icon: Code2,
-}));
 
 export default function Services() {
   return (
@@ -65,37 +57,16 @@ export default function Services() {
   </p>
 </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {SERVICES.map((service, index) => (
-              <motion.article
-                key={service.title}
-                {...fadeUp}
-                transition={{ delay: index * 0.06, ...fadeUp.transition }}
-                className={`glass rounded-2xl p-7 lg:p-9 ${
-                  index === SERVICES.length - 1 ? 'md:col-span-2' : ''
-                }`}
-              >
-                <div className="flex flex-col sm:flex-row gap-5">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                    <service.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="space-y-4">
-                    <div>
-                      <span className="font-mono text-[11px] tracking-[0.15em] uppercase text-accent">
-                        {String(index + 1).padStart(2, '0')}
-                      </span>
-                      <h2 className="font-heading font-bold text-xl text-secondary mt-1">{service.title}</h2>
-                    </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {service.focus.map(item => (
-                        <span key={item} className="px-3 py-1 text-xs rounded-lg bg-muted text-muted-foreground">
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </motion.article>
+            {CAPABILITIES.map((capability, index) => (
+              <CapabilityCard
+                key={capability.id}
+                icon={capability.icon}
+                title={capability.title}
+                description={capability.description}
+                services={capability.services.slice(0, 4)}
+                index={index}
+                className={index === CAPABILITIES.length - 1 ? 'md:col-span-2' : ''}
+              />
             ))}
           </div>
         </div>

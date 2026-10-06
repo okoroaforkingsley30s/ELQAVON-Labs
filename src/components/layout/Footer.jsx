@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Mail, MapPin, Globe2 } from 'lucide-react';
 import NewsletterForm from './NewsletterForm';
 import { BRAND } from '@/config/brand';
+import { COMPANY } from '@/config/company';
 import BrandLogo from '@/components/BrandLogo';
 
 const FOOTER_LINKS = {
@@ -41,17 +42,17 @@ export default function Footer() {
               <BrandLogo className="h-auto w-40" />
             </Link>
             <p className="text-white/70 text-sm max-w-sm leading-relaxed">
-              {BRAND.description}
+              {COMPANY.businessDescription}
             </p>
             <NewsletterForm />
             <div className="space-y-2 text-sm text-white/70">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-accent" />
-                <a href={`mailto:${BRAND.email}`} className="hover:text-white transition-colors">{BRAND.email}</a>
+                <a href={`mailto:${COMPANY.email}`} className="hover:text-white transition-colors">{COMPANY.email}</a>
               </div>
               <div className="flex items-center gap-2">
                 <Globe2 className="w-4 h-4 text-accent" />
-                <a href={BRAND.website} className="hover:text-white transition-colors">{BRAND.website.replace('https://', '')}</a>
+                <a href={COMPANY.website} className="hover:text-white transition-colors">{COMPANY.website.replace('https://', '')}</a>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-accent" />
@@ -81,7 +82,7 @@ export default function Footer() {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
           <p className="text-xs text-white/60">
-            © 2026 {BRAND.company}. All rights reserved.
+            © 2026 {COMPANY.legalName}. All rights reserved.
           </p>
           <p className="text-xs text-white/60">{BRAND.tagline}</p>
         </div>

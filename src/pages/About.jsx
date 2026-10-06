@@ -19,6 +19,10 @@ import {
 import SectionHeading from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/button';
 import { BRAND } from '@/config/brand';
+import { COMPANY } from '@/config/company';
+import { PRODUCTS } from '@/config/products';
+
+const FEATURED_PRODUCTS = PRODUCTS.filter(({ id }) => ['arkone', 'arkpay'].includes(id));
 
 const VALUES = [
   {
@@ -88,16 +92,8 @@ export default function About() {
             <h1 className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl tracking-tighter text-secondary">
               Engineering Intelligent Systems for the Future
             </h1>
-            <div className="max-w-3xl space-y-4 text-muted-foreground text-base lg:text-lg leading-relaxed">
-              <p>
-                {BRAND.displayName} is a technology engineering company that designs and develops secure software,
-                intelligent business systems and integrated digital infrastructure for organisations preparing for the future.
-              </p>
-              <p>
-                We combine software engineering, operational understanding and digital innovation to solve complex business
-                problems. Our work spans enterprise platforms, ERP systems, fintech infrastructure, artificial intelligence,
-                cloud solutions and digital transformation.
-              </p>
+            <div className="max-w-3xl text-muted-foreground text-base lg:text-lg leading-relaxed">
+              <p>{COMPANY.businessDescription}</p>
             </div>
           </motion.div>
         </div>
@@ -109,7 +105,7 @@ export default function About() {
             <motion.article {...fadeUp} className="rounded-2xl p-8 lg:p-10 border border-white/10 bg-white/5">
               <Target className="w-7 h-7 text-accent mb-5" />
               <h2 className="font-heading font-bold text-2xl text-white">Our Mission</h2>
-              <p className="text-white/70 leading-relaxed mt-4">{BRAND.mission}</p>
+              <p className="text-white/70 leading-relaxed mt-4">{COMPANY.mission}</p>
             </motion.article>
             <motion.article
               {...fadeUp}
@@ -118,7 +114,7 @@ export default function About() {
             >
               <Eye className="w-7 h-7 text-accent mb-5" />
               <h2 className="font-heading font-bold text-2xl text-white">Our Vision</h2>
-              <p className="text-white/70 leading-relaxed mt-4">{BRAND.vision}</p>
+              <p className="text-white/70 leading-relaxed mt-4">{COMPANY.vision}</p>
             </motion.article>
           </div>
         </div>
@@ -182,20 +178,21 @@ export default function About() {
             description="Our product engineering work includes connected enterprise operations and controlled self-service platforms."
           />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <article className="rounded-2xl bg-secondary text-white p-8 lg:p-10">
-              <h3 className="font-heading font-bold text-2xl">{BRAND.products.arkOne}</h3>
-              <p className="text-white/70 leading-relaxed mt-4">
-                An integrated enterprise operations platform designed to connect departments, standardise workflows,
-                improve accountability and give management real-time operational visibility.
-              </p>
-            </article>
-            <article className="rounded-2xl border border-primary/15 bg-primary/5 p-8 lg:p-10">
-              <h3 className="font-heading font-bold text-2xl text-secondary">{BRAND.products.arkPay}</h3>
-              <p className="text-muted-foreground leading-relaxed mt-4">
-                A secure self-service card and identity platform designed to support controlled institutional service
-                delivery through integrated software, devices and institution-specific connectivity.
-              </p>
-            </article>
+            {FEATURED_PRODUCTS.map((product, index) => (
+              <article
+                key={product.id}
+                className={index === 0
+                  ? 'rounded-2xl bg-secondary text-white p-8 lg:p-10'
+                  : 'rounded-2xl border border-primary/15 bg-primary/5 p-8 lg:p-10'}
+              >
+                <h3 className={`font-heading font-bold text-2xl ${index === 0 ? '' : 'text-secondary'}`}>
+                  {product.name} by Elqavon
+                </h3>
+                <p className={`leading-relaxed mt-4 ${index === 0 ? 'text-white/70' : 'text-muted-foreground'}`}>
+                  {product.description}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

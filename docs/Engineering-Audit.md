@@ -200,3 +200,45 @@ Prioritized remaining work:
    Supabase project ID and define a production deployment configuration.
 
 No major feature implementation was started as part of this audit.
+
+## Verified milestone: public architecture stabilization
+
+**Verified date:** 2026-10-06
+
+**Starting HEAD:** `b75d87cd43a02440d4d89cbb06bdf3cbbf789990`
+
+- `BRAND` is now limited to public brand identity: names, division, tagline,
+  colors and asset references. `COMPANY` is authoritative for the legal name,
+  business description, mission, vision, contact details and corporate
+  metadata. Public page consumers use the appropriate source; the previous
+  conflicting mission and vision copies were reconciled in favor of the values
+  previously used by the shared brand config.
+- The current capability schema is `id`, `title`, `description`, `icon` and
+  `services`. `id` is the stable rendering key; `icon` is a statically imported
+  Lucide component reference. No slug, SEO or future-page fields were added
+  because no current consumer needs them.
+- `/services` now renders the canonical `CAPABILITIES` array through
+  `CapabilityCard`. The card accepts service labels and a layout class while
+  keeping the existing visual treatment. `WhyElqavon` remains integrated.
+- The About page's existing ArkOne and ArkPay preview now reads its names and
+  descriptions from `PRODUCTS`; other product entries remain reserved for a
+  future product experience. `INDUSTRIES` remains intentionally unconsumed
+  until an industry page or other current use is approved. `NAVIGATION` remains
+  consumed by the public navigation.
+- **Build:** `npm.cmd run build` — PASS (Vite production bundle built).
+- **Lint:** `npm.cmd run lint` — PASS.
+- **Typecheck:** NOT RUN; the historical typecheck backlog remains a separate
+  milestone.
+- The architecture changes are committed and pushed as
+  `feat: stabilize public capability architecture`.
+
+The initial verification found an existing local deletion of
+`public/assets/media/elqavon-hero.jpeg`, despite the expected clean checkpoint.
+It was excluded from the architecture commit and preserved. Therefore the
+commit can be synchronized with `origin/main`, while this local worktree will
+remain dirty until that deletion is resolved by its owner.
+
+**Remaining architectural decisions:** decide when to add an industry page and
+dedicated product experience; later capability route/SEO work will need a
+reviewed slug and summary field. Do not treat these future decisions as part of
+this verified milestone.

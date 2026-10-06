@@ -1,18 +1,14 @@
 export const COMPANY = {
-  name: "ELQAVON Technologies Limited",
-  shortName: "ELQAVON",
-
-  tagline: "Engineering What Comes Next.",
-
-  description:
-    "ELQAVON Technologies Limited is an enterprise technology company that designs, develops, integrates, secures, and supports intelligent software solutions for businesses, financial institutions, governments, and organizations worldwide.",
+  legalName: "Elqavon Technologies Limited",
+  businessDescription:
+    "An enterprise technology company that designs, develops, integrates, secures, and supports intelligent software solutions for businesses, financial institutions, governments, and organizations worldwide.",
 
   mission:
-    "To engineer intelligent, secure, and scalable technology solutions that empower organizations to innovate, transform, and grow with confidence.",
-
+    "Create secure, intelligent technology that enables organisations to operate more efficiently and prepare confidently for the future.",
   vision:
-    "To become one of Africa's leading enterprise technology companies, delivering globally competitive software, intelligent automation, and digital transformation solutions.",
-
+    "Become one of Africa's leading technology engineering companies, recognised globally for enterprise software, fintech infrastructure, AI systems and digital innovation.",
+  email: "hello@elqavon.space",
+  website: "https://elqavon.space",
   founded: "2025",
 
   headquarters: "Nigeria",

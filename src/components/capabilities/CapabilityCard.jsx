@@ -4,8 +4,9 @@ export default function CapabilityCard({
   icon: Icon,
   title,
   description,
-  focus = [],
+  services = [],
   index = 0,
+  className = "",
 }) {
   return (
     <motion.article
@@ -16,7 +17,7 @@ export default function CapabilityCard({
         duration: 0.5,
         delay: index * 0.06,
       }}
-      className="glass rounded-2xl p-7 lg:p-9"
+      className={`glass rounded-2xl p-7 lg:p-9 ${className}`.trim()}
     >
       <div className="flex flex-col sm:flex-row gap-5">
         <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
@@ -39,7 +40,7 @@ export default function CapabilityCard({
           </p>
 
           <div className="flex flex-wrap gap-2">
-            {focus.map(item => (
+            {services.map(item => (
               <span
                 key={item}
                 className="px-3 py-1 text-xs rounded-lg bg-muted text-muted-foreground"

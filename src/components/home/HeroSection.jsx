@@ -4,13 +4,14 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ChevronDown, Pause, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { BRAND } from '@/config/brand';
+import { COMPANY } from '@/config/company';
 
 const SLIDES = [
   {
     image: '/assets/media/elqavon-hero.webp',
     label: 'ELQAVON / Technology Engineering',
     title: BRAND.tagline,
-    description: BRAND.description,
+    description: COMPANY.businessDescription,
     primary: { label: 'Explore Our Solutions', path: '/services' },
     secondary: { label: 'Start a Project', path: '/contact' },
   },

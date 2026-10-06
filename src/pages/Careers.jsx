@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import SectionHeading from '@/components/ui/SectionHeading';
 import JobApplicationModal from '@/components/careers/JobApplicationModal';
 import { BRAND } from '@/config/brand';
+import { COMPANY } from '@/config/company';
 
 const CULTURE = [
   { icon: Wrench, title: 'Engineering Discipline', description: 'We value reliable thinking, careful implementation and technology that can be maintained.' },
@@ -138,7 +139,7 @@ export default function Careers() {
         <motion.div {...fadeUp} className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="font-heading font-extrabold text-3xl text-secondary">Have a Different Capability?</h2>
           <p className="text-muted-foreground mt-4">
-            Contact {BRAND.company} and tell us how your experience could contribute to the systems we are building.
+            Contact {COMPANY.legalName} and tell us how your experience could contribute to the systems we are building.
           </p>
           <Link to="/contact" className="inline-block mt-7">
             <Button size="lg" className="px-9 py-6 font-semibold">Get in Touch</Button>

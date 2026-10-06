@@ -9,6 +9,7 @@ import { Label } from '@/components/ui/label';
 import { appBackend } from '@/api/appBackend';
 import { toast } from 'sonner';
 import { BRAND } from '@/config/brand';
+import { COMPANY } from '@/config/company';
 
 const INITIAL_FORM = {
   name: '',
@@ -58,19 +59,19 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: BRAND.email,
-      href: `mailto:${BRAND.email}`,
+      value: COMPANY.email,
+      href: `mailto:${COMPANY.email}`,
     },
     {
       icon: Globe2,
       label: 'Website',
-      value: BRAND.website.replace('https://', ''),
-      href: BRAND.website,
+      value: COMPANY.website.replace('https://', ''),
+      href: COMPANY.website,
     },
     {
       icon: Building2,
       label: 'Company',
-      value: BRAND.company,
+      value: COMPANY.legalName,
     },
     {
       icon: ClipboardCheck,
